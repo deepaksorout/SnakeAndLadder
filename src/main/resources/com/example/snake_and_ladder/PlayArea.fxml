@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.snake_and_ladder.PlayAreaController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <ImageView layoutX="290" layoutY="0" fitHeight="500" fitWidth="500">
+            <image>
+                <Image url="@gameboard.jpg"/>
+            </image>
+        </ImageView>
+        <Text layoutX="10" layoutY="80" text="Player 1"></Text>
+        <ImageView layoutX="20" layoutY="100" fitWidth="30" fitHeight="50">
+            <image>
+                <Image url="@token1.jpg"/>
+            </image>
+        </ImageView>
+
+        <ImageView fx:id="player1" layoutX="240" layoutY="450" fitWidth="25" fitHeight="50">
+            <image>
+                <Image url="@token1.jpg"/>
+            </image>
+        </ImageView>
+
+        <ImageView fx:id="player2" layoutX="265" layoutY="450" fitWidth="25" fitHeight="50">
+            <image>
+                <Image url="@token2.jpg"/>
+            </image>
+        </ImageView>
+        <Text layoutX="10" layoutY="180" text="Player 2"></Text>
+        <ImageView layoutX="20" layoutY="200" fitWidth="30" fitHeight="50">
+            <image>
+                <Image url="@token2.jpg"/>
+            </image>
+        </ImageView>
+
+        <ImageView layoutX="150" layoutY="100" fitHeight="130" fitWidth="130" onMouseClicked="#roll">
+            <image>
+                <Image url="@dice.jpg"/>
+            </image>
+        </ImageView>
+        <Text fx:id="change" layoutX="170" layoutY="80" text="Player 1's turn"></Text>
+        <Text fx:id="number" layoutX="200" layoutY="260"></Text>
+
+    </children>
+</AnchorPane>
